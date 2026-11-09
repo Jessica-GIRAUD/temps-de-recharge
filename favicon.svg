@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Wattime</title>
+  <defs>
+    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17345D"/><stop offset="1" stop-color="#0C1D36"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="25" y1="15" x2="43" y2="49" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#65E3D0"/><stop offset="1" stop-color="#18B6A2"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="18" fill="url(#bg)"/>
+  <circle cx="32" cy="32" r="21" fill="none" stroke="#EAF4F7" stroke-width="3.2"/>
+  <path d="M32 15.5v3.5M48.5 32H45M32 48.5V45M15.5 32H19" stroke="#EAF4F7" stroke-width="2.4" stroke-linecap="round" opacity=".8"/>
+  <path d="M35.8 15.8 23.5 34h8.2l-3.5 14.2L41 29.7h-8.1l2.9-13.9Z" fill="url(#bolt)" stroke="#B8FFF3" stroke-width=".7" stroke-linejoin="round"/>
+</svg>

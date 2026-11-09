@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 112" role="img" aria-labelledby="title desc">
+  <title id="title">Wattime</title>
+  <desc id="desc">Logo Wattime, calculateur de temps et de coût de recharge électrique.</desc>
+  <defs>
+    <linearGradient id="bg" x1="10" y1="8" x2="94" y2="96" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17345D"/><stop offset="1" stop-color="#0C1D36"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="37" y1="22" x2="62" y2="77" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#65E3D0"/><stop offset="1" stop-color="#18B6A2"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8 8)">
+    <rect x="0" y="0" width="96" height="96" rx="27" fill="url(#bg)"/>
+    <circle cx="48" cy="48" r="33" fill="none" stroke="#EAF4F7" stroke-width="4.5"/>
+    <path d="M48 21v5M75 48h-5M48 75v-5M21 48h5" stroke="#EAF4F7" stroke-width="3.4" stroke-linecap="round" opacity=".8"/>
+    <path d="m54 22-20 29h13l-6 23 22-30H49l5-22Z" fill="url(#bolt)" stroke="#B8FFF3" stroke-width="1.1" stroke-linejoin="round"/>
+  </g>
+  <text x="126" y="65"
+      font-family="Inter, Manrope, Arial, sans-serif"
+      font-size="48"
+      font-weight="750"
+      letter-spacing="-2.2">
+    <tspan fill="#17345D">Watt</tspan><tspan fill="#18A995">ime</tspan>
+  </text>
+  <text x="129" y="88" font-family="Inter, Manrope, Arial, sans-serif" font-size="12" font-weight="650" letter-spacing="2.25" fill="#66758A">TEMPS &amp; COÛT DE RECHARGE</text>
+</svg>
