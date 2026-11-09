@@ -1,0 +1,11 @@
+{
+  "name": "temps-de-recharge",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "keys": "node scripts/generate-keys.mjs",
+    "check:evkx": "node --env-file=.env scripts/check-evkx.mjs",
+    "test": "node scripts/selftest.mjs"
+  }
+}

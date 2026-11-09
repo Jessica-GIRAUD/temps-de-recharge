@@ -1,0 +1,6 @@
+keys/
+.env
+.env.*
+!.env.example
+.vercel/
+node_modules/
