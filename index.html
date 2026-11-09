@@ -19,6 +19,9 @@
     --accent-ink: #ffffff;
     --chip: #E8EEF5;
     --focus: #f0a900;
+    --logo-main-color: #17345D;
+    --logo-accent-color: #18A995;
+    --logo-sub-color: #66758A;
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -33,6 +36,9 @@
       --accent: #2E5A8A;
       --accent-ink: #ffffff;
       --chip: #1B3855;
+      --logo-main-color: #ffffff;
+      --logo-accent-color: #65E3D0;
+      --logo-sub-color: #93B0B8;
       color-scheme: dark;
     }
   }
@@ -45,6 +51,9 @@
     --accent: #2E5A8A;
     --accent-ink: #ffffff;
     --chip: #1B3855;
+    --logo-main-color: #ffffff;
+    --logo-accent-color: #65E3D0;
+    --logo-sub-color: #93B0B8;
     color-scheme: dark;
   }
   html { scroll-padding-top: env(safe-area-inset-top, 0px); height: 100%; }
@@ -292,11 +301,54 @@
     cursor: pointer;
     text-decoration: underline;
   }
+  .logo-container {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .logo-container svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 </style>
 </head>
 <body>
 <main>
-  <img src="wattime-logo.svg" alt="Wattime - Temps & Coût de recharge" style="width: 100%; max-width: 380px; height: auto; margin-bottom: 20px;">
+  <div class="logo-container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 112" role="img" aria-labelledby="logo-title logo-desc">
+      <title id="logo-title">Wattime</title>
+      <desc id="logo-desc">Logo Wattime, calculateur de temps et de coût de recharge électrique.</desc>
+      <style>
+        .logo-text-main { fill: var(--logo-main-color, #17345D); }
+        .logo-text-accent { fill: var(--logo-accent-color, #18A995); }
+        .logo-text-sub { fill: var(--logo-sub-color, #66758A); }
+      </style>
+      <defs>
+        <linearGradient id="bg" x1="10" y1="8" x2="94" y2="96" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#17345D"/><stop offset="1" stop-color="#0C1D36"/>
+        </linearGradient>
+        <linearGradient id="bolt" x1="37" y1="22" x2="62" y2="77" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#65E3D0"/><stop offset="1" stop-color="#18B6A2"/>
+        </linearGradient>
+      </defs>
+      <g transform="translate(8 8)">
+        <rect x="0" y="0" width="96" height="96" rx="27" fill="url(#bg)"/>
+        <circle cx="48" cy="48" r="33" fill="none" stroke="#EAF4F7" stroke-width="4.5"/>
+        <path d="M48 21v5M75 48h-5M48 75v-5M21 48h5" stroke="#EAF4F7" stroke-width="3.4" stroke-linecap="round" opacity=".8"/>
+        <path d="m54 22-20 29h13l-6 23 22-30H49l5-22Z" fill="url(#bolt)" stroke="#B8FFF3" stroke-width="1.1" stroke-linejoin="round"/>
+      </g>
+      <text x="126" y="65"
+          font-family="Inter, Manrope, Arial, sans-serif"
+          font-size="48"
+          font-weight="750"
+          letter-spacing="-2.2">
+        <tspan class="logo-text-main">Watt</tspan><tspan class="logo-text-accent">ime</tspan>
+      </text>
+      <text x="129" y="88" font-family="Inter, Manrope, Arial, sans-serif" font-size="12" font-weight="650" letter-spacing="2.25" class="logo-text-sub">TEMPS &amp; COÛT DE RECHARGE</text>
+    </svg>
+  </div>
 
   <div class="field">
     <div class="label">Véhicule</div>
@@ -846,7 +898,8 @@
     var root = document.documentElement;
     var cur = root.getAttribute('data-theme');
     var dark = cur ? cur === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-    root.setAttribute('data-theme', dark ? 'light' : 'dark');
+    var newTheme = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme', newTheme);
   });
 
   ['min', 'ses', 'roam', 'idle'].forEach(function (k) {
@@ -897,6 +950,8 @@
   DATA.forEach(function (v, i) { if (v.b === 'Nissan' && v.m === 'Micra' && v.c === 52) di = i; });
   applyVehicle(di);
   update();
+
+
 })();
 </script>
 </body>

@@ -1,6 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 112" role="img" aria-labelledby="title desc">
   <title id="title">Wattime</title>
   <desc id="desc">Logo Wattime, calculateur de temps et de coût de recharge électrique.</desc>
+  <style>
+    .logo-text-main { fill: #17345D; }
+    .logo-text-accent { fill: #18A995; }
+    .logo-text-sub { fill: #66758A; }
+  </style>
   <defs>
     <linearGradient id="bg" x1="10" y1="8" x2="94" y2="96" gradientUnits="userSpaceOnUse">
       <stop stop-color="#17345D"/><stop offset="1" stop-color="#0C1D36"/>
@@ -20,7 +25,7 @@
       font-size="48"
       font-weight="750"
       letter-spacing="-2.2">
-    <tspan fill="#17345D">Watt</tspan><tspan fill="#18A995">ime</tspan>
+    <tspan class="logo-text-main">Watt</tspan><tspan class="logo-text-accent">ime</tspan>
   </text>
-  <text x="129" y="88" font-family="Inter, Manrope, Arial, sans-serif" font-size="12" font-weight="650" letter-spacing="2.25" fill="#66758A">TEMPS &amp; COÛT DE RECHARGE</text>
+  <text x="129" y="88" font-family="Inter, Manrope, Arial, sans-serif" font-size="12" font-weight="650" letter-spacing="2.25" class="logo-text-sub">TEMPS &amp; COÛT DE RECHARGE</text>
 </svg>
